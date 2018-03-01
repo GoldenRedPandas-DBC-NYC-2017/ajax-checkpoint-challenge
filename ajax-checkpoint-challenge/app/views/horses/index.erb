@@ -1,0 +1,14 @@
+<h1 class="big">Meet the Herd</h1>
+
+<ul class="list">
+  <% @horses.each do |horse| %>
+    <li class="list-item col-1-2">
+      <a class="big fancy-text light-link" href="/horses/<%= horse.id%>"><%= horse.name %></a>
+    </li>
+  <% end %>
+</ul>
+
+<form id="add-horse-form" class="flex flex-column" method="GET" action="/horses/new">
+  <button type="submit" class="button dark">Add a Horse</button>
+</form>
+
